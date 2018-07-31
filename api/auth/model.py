@@ -2,14 +2,19 @@
 # -*- coding: utf-8 -*-
 
 from flask_login import UserMixin
-from api import login_manager
+from api import login_manager, db
 
 # Our mock database.
 users = {'test': {'password': '123456'}}
 
 
-class User(UserMixin):
-    pass
+class User(UserMixin, db.Model):
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True, index=True)
+    email = db.Column(db.String(64), unique=True, index=True)
+    password_hash = db.Column(db.String(128))
 
 
 @login_manager.user_loader
