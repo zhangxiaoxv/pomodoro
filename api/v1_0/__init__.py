@@ -9,3 +9,4 @@ api = Api(api_bp)
 
 
 from api.v1_0 import company
+from api.v1_0 import role

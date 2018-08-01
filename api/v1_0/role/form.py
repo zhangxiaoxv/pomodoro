@@ -6,5 +6,5 @@ from wtforms import StringField
 from wtforms.validators import DataRequired, Length
 
 
-class CompanyForm(FlaskForm):
+class RoleForm(FlaskForm):
     name = StringField('name', validators=[DataRequired(), Length(1, 64)])
