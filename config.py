@@ -30,7 +30,7 @@ class DevelopmentConfig(Config):
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:saysum123@localhost:3306/blog?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:saysum123@localhost:3306/pomodoro?charset=utf8'
 
 
 class TestingConfig(Config):

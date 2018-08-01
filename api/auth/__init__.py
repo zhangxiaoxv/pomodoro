@@ -15,7 +15,7 @@ users = {'test': '123456'}
 
 
 @api.resource('/auth')
-class Auth(Resource):
+class AuthApi(Resource):
     @login_required
     def get(self):
         return jsonify({'result': 'success'})
